@@ -719,6 +719,14 @@
             }
         },
         {
+            "Key": "798efffa-6c81-432e-87ad-fe22cc049995",
+            "Value": {
+                "id": "12969ecf-b7c8-4a96-a85c-26eec8ad841c",
+                "resourcePath": "datafiles_yy\\levelDB.txt.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "7a121485-f4e2-42ee-b63e-7f6c67780b27",
             "Value": {
                 "id": "95f63d4f-0e0d-46a4-85e3-65160bbbaddc",
@@ -788,14 +796,6 @@
                 "id": "49678e4c-f571-4768-968b-45188a500ed0",
                 "resourcePath": "scripts\\scr_move_round\\scr_move_round.yy",
                 "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "8b8a4074-0bbf-4953-bdb9-65af2acaa911",
-            "Value": {
-                "id": "029a2a71-8873-4b98-88e8-f8d2e1eef245",
-                "resourcePath": "datafiles_yy\\levelDB.txt.yy",
-                "resourceType": "GMIncludedFile"
             }
         },
         {
