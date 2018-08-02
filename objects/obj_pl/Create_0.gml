@@ -12,5 +12,5 @@ result_radius=global.radius_+100;
 jump_=11;
 speed_=global.speed_
 AI="stand"
-dopusk=20
+dopusk=16
 

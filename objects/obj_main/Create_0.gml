@@ -204,22 +204,29 @@ inter_solid_3_5.image_xscale=0.1
 inter_solid_3_5.image_yscale=0.1
 inter_solid_3_5.new_solid=noone;
 
+inter_solid_fall=instance_create_layer(250,350,"Instances",obj_solid_interface);
+inter_solid_fall.sprite_index=spr_solid_fall
+inter_solid_fall.sprite_id="spr_solid_fall"
+inter_solid_fall.image_xscale=0.6
+inter_solid_fall.image_yscale=0.6
+inter_solid_fall.new_solid=noone;
+
 //interface object
-inter_object=instance_create_layer(50,320,"Instances",obj_object_interface);
+inter_object=instance_create_layer(70,320,"Instances",obj_object_interface);
 inter_object.sprite_index=spr_pie
 inter_object.sprite_id="spr_pie"
 inter_object.image_xscale=0.6
 inter_object.image_yscale=0.6
 inter_object.new_solid=noone;
 
-inter_object_2=instance_create_layer(150,290,"Instances",obj_object_interface);
+inter_object_2=instance_create_layer(170,290,"Instances",obj_object_interface);
 inter_object_2.sprite_index=spr_saw
 inter_object_2.sprite_id="spr_saw"
 inter_object_2.image_xscale=0.6
 inter_object_2.image_yscale=0.6
 inter_object_2.new_solid=noone;
 
-inter_object_3=instance_create_layer(250,290,"Instances",obj_object_interface);
+inter_object_3=instance_create_layer(270,290,"Instances",obj_object_interface);
 inter_object_3.sprite_index=spr_pie_up
 inter_object_3.sprite_id="spr_pie_up"
 inter_object_3.image_xscale=0.6
@@ -227,19 +234,47 @@ inter_object_3.image_yscale=0.6
 inter_object_3.new_solid=noone;
 
 
-inter_object_4=instance_create_layer(350,290,"Instances",obj_object_interface);
+inter_object_4=instance_create_layer(370,290,"Instances",obj_object_interface);
 inter_object_4.sprite_index=spr_pie_up_stand
 inter_object_4.sprite_id="spr_pie_up_stand"
-inter_object_4.image_xscale=0.6
-inter_object_4.image_yscale=0.6
+inter_object_4.image_xscale=1.2
+inter_object_4.image_yscale=1.2
 inter_object_4.new_solid=noone;
 
-inter_object_5=instance_create_layer(450,320,"Instances",obj_object_interface);
+inter_object_5=instance_create_layer(470,320,"Instances",obj_object_interface);
 inter_object_5.sprite_index=spr_move_pie
 inter_object_5.sprite_id="spr_move_pie"
-inter_object_5.image_xscale=0.6
-inter_object_5.image_yscale=0.6
+inter_object_5.image_xscale=0.8
+inter_object_5.image_yscale=0.8
 inter_object_5.new_solid=noone;
+
+inter_object_6=instance_create_layer(70,350,"Instances",obj_object_interface);
+inter_object_6.sprite_index=spr_saw_hor
+inter_object_6.sprite_id="spr_saw_hor"
+inter_object_6.image_xscale=0.6
+inter_object_6.image_yscale=0.6
+inter_object_6.new_solid=noone;
+
+inter_object_7=instance_create_layer(170,350,"Instances",obj_object_interface);
+inter_object_7.sprite_index=spr_saw_vert
+inter_object_7.sprite_id="spr_saw_vert"
+inter_object_7.image_xscale=0.6
+inter_object_7.image_yscale=0.6
+inter_object_7.new_solid=noone;
+
+inter_object_8=instance_create_layer(370,380,"Instances",obj_object_interface);
+inter_object_8.sprite_index=spr_good
+inter_object_8.sprite_id="spr_good"
+inter_object_8.image_xscale=0.6
+inter_object_8.image_yscale=0.6
+inter_object_8.new_solid=noone;
+
+inter_object_9=instance_create_layer(470,380,"Instances",obj_object_interface);
+inter_object_9.sprite_index=spr_bad
+inter_object_9.sprite_id="spr_bad"
+inter_object_9.image_xscale=0.6
+inter_object_9.image_yscale=0.6
+inter_object_9.new_solid=noone;
 
 
 //cube

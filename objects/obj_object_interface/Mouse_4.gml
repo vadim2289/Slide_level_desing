@@ -18,6 +18,20 @@ if(sprite_id="spr_pie"){
 	obj_canvas_solid.visible=true;
 	obj_canvas_solid.sprite_index=spr_canvas_object
 	
+}else if(sprite_id="spr_saw_vert"){
+	new_solid=instance_create_layer(mouse_x,mouse_y,"Instances",obj_saw_vertical);
+	//new_solid.sprite_index=asset_get_index(sprite_id)
+	//new_solid.height_radius=0;
+	obj_canvas_solid.visible=true;
+	obj_canvas_solid.sprite_index=spr_canvas_object
+	
+}else if(sprite_id="spr_saw_hor"){
+	new_solid=instance_create_layer(mouse_x,mouse_y,"Instances",obj_saw_horizon);
+	//new_solid.sprite_index=asset_get_index(sprite_id)
+	//new_solid.height_radius=0;
+	obj_canvas_solid.visible=true;
+	obj_canvas_solid.sprite_index=spr_canvas_object
+	
 }else if(sprite_id="spr_pie_up"){
 	new_solid=instance_create_layer(mouse_x,mouse_y,"Instances",obj_pie_up);
 	//new_solid.sprite_index=asset_get_index(sprite_id)
@@ -34,6 +48,20 @@ if(sprite_id="spr_pie"){
 	
 }else if(sprite_id="spr_move_pie"){
 	new_solid=instance_create_layer(mouse_x,mouse_y,"Instances",obj_move_enemy);
+	//new_solid.sprite_index=asset_get_index(sprite_id)
+	//new_solid.height_radius=0;
+	obj_canvas_solid.visible=true;
+	obj_canvas_solid.sprite_index=spr_canvas_object
+	
+}else if(sprite_id="spr_good"){
+	new_solid=instance_create_layer(mouse_x,mouse_y,"Instances",obj_good);
+	//new_solid.sprite_index=asset_get_index(sprite_id)
+	//new_solid.height_radius=0;
+	obj_canvas_solid.visible=true;
+	obj_canvas_solid.sprite_index=spr_canvas_object
+	
+}else if(sprite_id="spr_bad"){
+	new_solid=instance_create_layer(mouse_x,mouse_y,"Instances",obj_bad);
 	//new_solid.sprite_index=asset_get_index(sprite_id)
 	//new_solid.height_radius=0;
 	obj_canvas_solid.visible=true;

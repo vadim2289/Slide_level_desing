@@ -3,7 +3,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-show_debug_message(global.mouse_l)
+//show_debug_message(global.mouse_l)
 if(global.mouse_l=="eath"){
 	global.mouse_l="";
 	global.rotation_mouse=0
@@ -17,11 +17,24 @@ if(global.mouse_l=="eath"){
 		//image_angle=alpha
 		
 	}
+	with(obj_solid_fall){
+		start_alpha=image_angle+90
+		//image_angle=alpha
+		
+	}
 	with(obj_pie){
 		start_alpha=image_angle+90
 		//image_angle=alpha
 	}
 	with(obj_saw){
+		start_alpha=image_angle+90
+		//image_angle=alpha
+	}
+	with(obj_saw_vertical){
+		start_alpha=image_angle+90
+		//image_angle=alpha
+	}
+	with(obj_saw_horizon){
 		start_alpha=image_angle+90
 		//image_angle=alpha
 	}
@@ -41,17 +54,26 @@ if(global.mouse_l=="eath"){
 	with(obj_line){
 		rotation_start=image_angle
 		//image_angle=alpha
+	}with(obj_good){
+		rotation_start=image_angle
+		//image_angle=alpha
+	}
+	with(obj_bad){
+		rotation_start=image_angle
+		//image_angle=alpha
 	}
 	//scr_360(global.object_mouse)
 }
 if(global.mouse_l=="solid"){
-	//show_debug_message("alpha_solid = "+string(global.object_mouse.alpha))
-	global.mouse_l=""
-	global.rotation_mouse=0
-	global.draw_=true
-	with(global.object_mouse){		
-		start_alpha=image_angle+90
-	}
+	
+		//show_debug_message("alpha_solid = "+string(global.object_mouse.alpha))
+		global.mouse_l=""
+		global.rotation_mouse=0
+		global.draw_=true
+		with(global.object_mouse){		
+			start_alpha=image_angle+90
+		}
+	
 	scr_write_db(global.object_mouse,false,0)
 }
 if(global.mouse_l=="interface1"){		
@@ -71,8 +93,13 @@ if(global.mouse_l=="interface2"){
 	
 	if(position_meeting(global.object_mouse.new_solid.x,global.object_mouse.new_solid.y,obj_canvas_solid)){
 		//var inst=instance_position(mouse_x, mouse_y, obj_canvas_solid)
-		show_debug_message(global.object_mouse.new_solid.height_radius)		
+		//show_debug_message(global.object_mouse.new_solid.height_radius)		
 		//inst.sprite_index=global.object_mouse.new_solid.sprite_index
+		
+		if(global.object_mouse.new_solid.type_obj=="obj_solid_fall"){
+			show_debug_message(global.object_mouse)
+			global.object_mouse.new_solid.height_radius=abs(point_distance(mouse_x,mouse_y,global.x_,global.y_))-825
+		}
 		global.object_mouse.new_solid.start_alpha=point_direction(global.x_,global.y_,mouse_x,mouse_y)
 		global.object_mouse.new_solid.alpha=global.object_mouse.new_solid.start_alpha
 		global.object_mouse.new_solid.image_angle=global.object_mouse.new_solid.alpha-90

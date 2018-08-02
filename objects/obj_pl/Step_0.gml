@@ -32,15 +32,19 @@ var y_future=global.y_+lengthdir_y(result_radius+vertical_speed,alpha);
 var x_future_1=global.x_+lengthdir_x(result_radius+sign(vertical_speed),alpha);
 var y_future_1=global.y_+lengthdir_y(result_radius+sign(vertical_speed),alpha);
 var result_radius_local=result_radius
+
+
 //show_debug_message("!!!!!!!!!!!!"+string(button_key)+" ver "+string(vertical_speed))
 if(place_meeting(x_future,y_future,obj_eath)){	
-	AI="on_eath"
+	AI="on_eath"	
+	
 	//Проверка коллизий при падении к центру круга и установка радиуса для координат на 1 пиксель выше коллизии		
 	while !place_meeting(x_future_1,y_future_1,obj_eath){	
 		result_radius=result_radius_local
 		result_radius_local+=sign(vertical_speed);	
 		x_future_1=global.x_+lengthdir_x(result_radius_local,alpha); 
-		y_future_1=global.y_+lengthdir_y(result_radius_local,alpha);			
+		y_future_1=global.y_+lengthdir_y(result_radius_local,alpha);	
+		
 	}	
 	/*if(button_key>0){
 		vertical_speed=button_key*jump_
@@ -56,31 +60,42 @@ if(place_meeting(x_future,y_future,obj_eath)){
 		
 		if(abs(result_radius-result_radius_local)>dopusk){// если игрок проваливается в солид больше чем на 20 пикселей, то конец, если меньше, то нор, встает наверх
 	//		game_restart()
-			global.Testing="PROIGRAL LOPUH "
-		if(!global.play_){
+				global.Testing="PROIGRAL LOPUH "
+			if(!global.play_){
 	
-		}else{
-			global.speed_=0
-			global.play_=false;	
-			speed_=global.speed_
-		}
+			}else{
+				global.speed_=0
+				global.play_=false;	
+				speed_=global.speed_
+			}
 				
 		}else{	
 			//global.Testing="norm "+string(result_radius-result_radius_local)
 			//result_radius=result_radius_local
 		}
-	}	
-
-	if(result_radius_local<820){
-		result_radius=725
-	}else if(result_radius_local>820&&result_radius_local<920){
-		result_radius=825		
-	}else if(result_radius_local>920&&result_radius_local<1020){
-		result_radius=925
-	}else if(result_radius_local>1020&&result_radius_local<1120){
-		result_radius=1025
-	}else if(result_radius_local>1120&&result_radius_local<1320){
-		result_radius=1125
+	}
+	var inst= instance_place(x_future,y_future,obj_eath)
+	//show_debug_message(object_get_name(inst.object_index))
+		if(object_get_name(inst.object_index)=="obj_solid_fall"&&inst.alarm[0]<=0){
+			inst.fall_=true
+			show_debug_message(inst.fall_)
+		}
+/*	if(other.id.sprite_index==spr_solid_fall){
+		other.id.fall_=true
+		show_debug_message(object_get_name(other.object_index))
+	}*/
+	if(object_get_name(inst.object_index)!="obj_solid_fall"){
+		if(result_radius_local<820){
+			result_radius=725
+		}else if(result_radius_local>820&&result_radius_local<920){
+			result_radius=825		
+		}else if(result_radius_local>920&&result_radius_local<1020){
+			result_radius=925
+		}else if(result_radius_local>1020&&result_radius_local<1120){
+			result_radius=1025
+		}else if(result_radius_local>1120&&result_radius_local<1320){
+			result_radius=1125
+		}
 	}
 }else{
 	AI="jamp"	
