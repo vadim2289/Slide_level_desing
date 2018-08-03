@@ -7,7 +7,7 @@ if(instance_exists(global.object_mouse)){
 	}
 }
 draw_text(1840,250,"fps"+string(fps))
-
+//draw_text(1300,340,"test "+string(global.Testing))
 draw_text(1300,240,"dir_ "+string(filename_dir("levelDB.txt")))
 //draw_text(1540,350,"testing: "+string(global.Testing))
 draw_text(1840,270,string(mouse_x)+":"+string(mouse_y))

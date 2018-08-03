@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 //scr_move_round()
-show_debug_message(alarm[0])
+//show_debug_message(alarm[0])
 if(global.play_){	
 	alpha+=global.speed_+speed_	
 	image_angle=alpha-90

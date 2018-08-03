@@ -55,11 +55,11 @@ if(global.mouse_l=="eath"){
 		rotation_start=image_angle
 		//image_angle=alpha
 	}with(obj_good){
-		rotation_start=image_angle
+		start_alpha=image_angle+90
 		//image_angle=alpha
 	}
 	with(obj_bad){
-		rotation_start=image_angle
+		start_alpha=image_angle+90
 		//image_angle=alpha
 	}
 	//scr_360(global.object_mouse)
@@ -124,7 +124,9 @@ if(global.mouse_l=="interface3"){
 	if(position_meeting(global.object_mouse.new_solid.x,global.object_mouse.new_solid.y,obj_canvas_solid)){
 		//var inst=instance_position(mouse_x, mouse_y, obj_canvas_solid)
 		if(global.object_mouse.new_solid.type_obj="obj_pie_up"||global.object_mouse.new_solid.type_obj="obj_pie_up_shoot"){
-			if(point_distance(mouse_x,mouse_y,global.x_,global.y_)-global.radius_>0&&point_distance(mouse_x,mouse_y,global.x_,global.y_)-global.radius_<100){
+			if(point_distance(mouse_x,mouse_y,global.x_,global.y_)-global.radius_>-100&&point_distance(mouse_x,mouse_y,global.x_,global.y_)-global.radius_<0){
+				global.object_mouse.new_solid.height_radius=0;
+			}else if(point_distance(mouse_x,mouse_y,global.x_,global.y_)-global.radius_>0&&point_distance(mouse_x,mouse_y,global.x_,global.y_)-global.radius_<100){
 				global.object_mouse.new_solid.height_radius=100;
 			}else if(point_distance(mouse_x,mouse_y,global.x_,global.y_)-global.radius_>100&&point_distance(mouse_x,mouse_y,global.x_,global.y_)-global.radius_<200){
 				global.object_mouse.new_solid.height_radius=200;
@@ -132,14 +134,18 @@ if(global.mouse_l=="interface3"){
 				global.object_mouse.new_solid.height_radius=300;
 			}
 		}else{
-			if(point_distance(mouse_x,mouse_y,global.x_,global.y_)-global.radius_>0&&point_distance(mouse_x,mouse_y,global.x_,global.y_)-global.radius_<100){
-				global.object_mouse.new_solid.height_radius=0;
+			if(point_distance(mouse_x,mouse_y,global.x_,global.y_)-global.radius_>-100&&point_distance(mouse_x,mouse_y,global.x_,global.y_)-global.radius_<0){
+				global.object_mouse.new_solid.height_radius=-100;
+			}else if(point_distance(mouse_x,mouse_y,global.x_,global.y_)-global.radius_>0&&point_distance(mouse_x,mouse_y,global.x_,global.y_)-global.radius_<100){
+			global.object_mouse.new_solid.height_radius=0;
 			}else if(point_distance(mouse_x,mouse_y,global.x_,global.y_)-global.radius_>100&&point_distance(mouse_x,mouse_y,global.x_,global.y_)-global.radius_<200){
 				global.object_mouse.new_solid.height_radius=100;
-			}else{
+			}else if(point_distance(mouse_x,mouse_y,global.x_,global.y_)-global.radius_>200&&point_distance(mouse_x,mouse_y,global.x_,global.y_)-global.radius_<300){
 				global.object_mouse.new_solid.height_radius=200;
-			}		
-		}
+			}else{
+				global.object_mouse.new_solid.height_radius=300;
+			}
+		}/*
 		if(point_distance(mouse_x,mouse_y,global.x_,global.y_)-global.radius_>0&&point_distance(mouse_x,mouse_y,global.x_,global.y_)-global.radius_<100){
 			global.object_mouse.new_solid.height_radius=0;
 		}else if(point_distance(mouse_x,mouse_y,global.x_,global.y_)-global.radius_>100&&point_distance(mouse_x,mouse_y,global.x_,global.y_)-global.radius_<200){
@@ -148,7 +154,7 @@ if(global.mouse_l=="interface3"){
 			global.object_mouse.new_solid.height_radius=200;
 		}else{
 			global.object_mouse.new_solid.height_radius=300;
-		}
+		}*/
 		//global.object_mouse.new_solid.height_radius=point_distance(mouse_x,mouse_y,global.x_,global.y_)-global.radius_
 		//inst.sprite_index=global.object_mouse.new_solid.sprite_index
 		global.object_mouse.new_solid.start_alpha=point_direction(global.x_,global.y_,mouse_x,mouse_y)

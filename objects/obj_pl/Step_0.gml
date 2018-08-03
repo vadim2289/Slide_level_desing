@@ -60,7 +60,7 @@ if(place_meeting(x_future,y_future,obj_eath)){
 		
 		if(abs(result_radius-result_radius_local)>dopusk){// если игрок проваливается в солид больше чем на 20 пикселей, то конец, если меньше, то нор, встает наверх
 	//		game_restart()
-				global.Testing="PROIGRAL LOPUH "
+				//global.Testing="PROIGRAL LOPUH "
 			if(!global.play_){
 	
 			}else{
@@ -78,7 +78,7 @@ if(place_meeting(x_future,y_future,obj_eath)){
 	//show_debug_message(object_get_name(inst.object_index))
 		if(object_get_name(inst.object_index)=="obj_solid_fall"&&inst.alarm[0]<=0){
 			inst.fall_=true
-			show_debug_message(inst.fall_)
+			//show_debug_message(inst.fall_)
 		}
 /*	if(other.id.sprite_index==spr_solid_fall){
 		other.id.fall_=true
@@ -96,6 +96,8 @@ if(place_meeting(x_future,y_future,obj_eath)){
 		}else if(result_radius_local>1120&&result_radius_local<1320){
 			result_radius=1125
 		}
+	}else{
+		result_radius=global.radius_+inst.height_radius
 	}
 }else{
 	AI="jamp"	
