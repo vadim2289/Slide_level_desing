@@ -79,7 +79,7 @@ if(global.mouse_l=="solid"){
 if(global.mouse_l=="interface1"){		
 	if(position_meeting(global.object_mouse.new_sector.x,global.object_mouse.new_sector.y,obj_eath)){
 		var inst=instance_position(mouse_x, mouse_y, obj_eath)
-		show_debug_message(global.object_mouse)
+		//show_debug_message(global.object_mouse)
 		inst.sprite_index=global.object_mouse.new_sector.sprite_index
 		instance_destroy(global.object_mouse.new_sector);		
 	}else{
@@ -97,7 +97,7 @@ if(global.mouse_l=="interface2"){
 		//inst.sprite_index=global.object_mouse.new_solid.sprite_index
 		
 		if(global.object_mouse.new_solid.type_obj=="obj_solid_fall"){
-			show_debug_message(global.object_mouse)
+			//show_debug_message(global.object_mouse)
 			global.object_mouse.new_solid.height_radius=abs(point_distance(mouse_x,mouse_y,global.x_,global.y_))-825
 		}
 		global.object_mouse.new_solid.start_alpha=point_direction(global.x_,global.y_,mouse_x,mouse_y)
@@ -168,7 +168,7 @@ if(global.mouse_l=="interface3"){
 			if(depth<=global.object_mouse.new_solid.depth){
 				global.object_mouse.new_solid.depth=depth-10
 			}
-			show_debug_message(string(global.object_mouse.new_solid.id)+"_____"+string(global.object_mouse.new_solid.depth))
+			//show_debug_message(string(global.object_mouse.new_solid.id)+"_____"+string(global.object_mouse.new_solid.depth))
 		}
 		scr_write_db(global.object_mouse.new_solid,false,0)
 		//instance_destroy(global.object_mouse.new_sector);		

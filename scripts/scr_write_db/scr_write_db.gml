@@ -19,7 +19,7 @@ if(load_sector=0){
 }
 
 var alpha_DB=0
-show_debug_message("sect "+string(sect))
+//show_debug_message("sect "+string(sect))
 var i=0
 var j=0
 

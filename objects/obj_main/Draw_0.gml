@@ -77,12 +77,12 @@ for(var i=9;i>-1;i--){
 }	  
 
 
-//
+/*
 if(global.draw_){
 	global.draw_=false
 	var stroka="56X4X677X9"
 	range_=scr_random_range(stroka);
-}
+}*/
 //dr//textbox_name
 draw_set_font(font_norm)
 draw_text(550,154,"Start number of sector")

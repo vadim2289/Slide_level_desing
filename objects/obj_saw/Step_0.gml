@@ -13,7 +13,7 @@ if(global.play_||global.mouse_l==""){
 
 	x=x_big_radius+lengthdir_x(little_radius,alpha_little_radius);
 	y=y_big_radius+lengthdir_y(little_radius,alpha_little_radius);
-	show_debug_message(x_big_radius-global.x_/13.75)
+//	show_debug_message(x_big_radius-global.x_/13.75)
 }else{
 	if(global.mouse_l=="eath"){			
 		alpha=start_alpha+global.rotation_mouse
@@ -34,6 +34,22 @@ y=global.y_+lengthdir_y(100,alpha);
 }
 
 
-scr_360()
+
+if(variable_instance_exists(id,"rotation_start")){
+	if(rotation_start>=360){
+		rotation_start-=360
+	}else if(rotation_start<0){
+		rotation_start=360+rotation_start
+	}	
+}
+if(variable_instance_exists(id,"alpha")){
+	if(alpha>=360){
+		alpha-=360
+		start_alpha-=360
+	}else if(alpha<0){
+		alpha=360+alpha
+		start_alpha=360+start_alpha
+	}
+}
 
 

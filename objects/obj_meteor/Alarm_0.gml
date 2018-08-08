@@ -14,4 +14,4 @@ y=y_start
 //meteor_start=true;
 speed=5
 direction=point_direction(x,y,x_end,y_end)
-show_debug_message(y_end)
+//show_debug_message(y_end)
