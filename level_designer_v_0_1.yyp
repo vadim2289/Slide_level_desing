@@ -55,14 +55,6 @@
             }
         },
         {
-            "Key": "065228bb-447e-447e-942c-470a581d9ab6",
-            "Value": {
-                "id": "e59b2809-7f0e-43be-b033-bd836196edec",
-                "resourcePath": "datafiles_yy\\levelDB.txt.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
             "Key": "067e5ee3-290a-4308-8948-96118aa29c2a",
             "Value": {
                 "id": "ab7396c7-7fdc-4db6-abbb-1b714d4c4f49",
@@ -220,6 +212,14 @@
                 "id": "00368729-3a86-40fd-a646-aaacb5b542bf",
                 "resourcePath": "objects\\obj_sector_circle_RR\\obj_sector_circle_RR.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "20e63980-2ad3-4f09-aed8-8116eeb436de",
+            "Value": {
+                "id": "26ab8819-bac0-4cf7-b89a-a5c7a247c498",
+                "resourcePath": "sprites\\spr_solid_test\\spr_solid_test.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -411,14 +411,6 @@
             "Value": {
                 "id": "fa996e16-09da-4447-8980-211aa4eb29fc",
                 "resourcePath": "sprites\\spr_meteor\\spr_meteor.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "48960cb5-ca12-4622-aaac-eb73d44277ce",
-            "Value": {
-                "id": "9f851b08-5e42-496a-a819-fb5082525b2e",
-                "resourcePath": "sprites\\sprite39\\sprite39.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -999,14 +991,6 @@
             }
         },
         {
-            "Key": "a9c7098c-8fae-472a-bd15-f4877c54ea09",
-            "Value": {
-                "id": "bae72a47-88f0-4c0c-ac3b-d121e694f81a",
-                "resourcePath": "sprites\\sprite40\\sprite40.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "abc4a052-9eb8-4987-9469-76ad9d255a71",
             "Value": {
                 "id": "3d6a0e3e-42d3-40a6-b491-dbaf454d4c6f",
@@ -1172,6 +1156,14 @@
                 "id": "afc015b0-8370-45aa-8663-6da1104ce21a",
                 "resourcePath": "objects\\obj_bad\\obj_bad.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "d304c807-d0f9-4b6e-a595-82e9932aa550",
+            "Value": {
+                "id": "aa291770-5aa8-420a-85f0-1bf6c5ecea31",
+                "resourcePath": "datafiles_yy\\levelDB.txt.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {

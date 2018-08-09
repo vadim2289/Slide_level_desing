@@ -2,7 +2,17 @@
 // You can write your code in this editor
 /// @description Insert description here
 // You can write your code in this editor
-
+/*
+// копирование области грида в новый с новым размером
+ds_grid_add_grid_region(global.DB1,global.DB,0,0,99,43,0,0)
+// и сохранение
+var level_data
+show_debug_message(ds_grid_width(global.DB1))
+level_data=ds_grid_write(global.DB1);
+file=file_text_open_write(working_directory +"levelDB.txt");
+file_text_write_string(file, level_data);
+file_text_close(file);
+*/
 //show_debug_message(global.mouse_l)
 if(global.mouse_l=="eath"){
 	global.mouse_l="";

@@ -7,7 +7,8 @@ global.speed_=0;
 global.sector_numb=0;
 global.max_=3;
 global.rotation_mouse=0;
-global.DB=ds_grid_create(100,43)
+global.DB=ds_grid_create(200,43)
+//global.DB1=ds_grid_create(200,43)
 global.mouse_start_x=0;
 global.mouse_start_y=0
 global.mouse_l=""
@@ -25,6 +26,7 @@ if (file_exists(working_directory +"levelDB.txt")){
 	ds_grid_read(global.DB,string_end)
 	file_text_close(file);
 }
+
 
 
 var i=9;
@@ -340,7 +342,8 @@ new_line7.rotation_start=225;
 //секторы объекты
 sector_r=instance_create_layer(global.x_,global.y_,"Instances",obj_eath); // правая точка
 sector_r.rotation_start=90;
-sector_r.sprite_index=0;
+sector_r.sprite_index=0
+//sector_r.mask_index=spr_circle_F;
 sector_r.sector_id=0
 
 sector_u=instance_create_layer(global.x_,global.y_,"Instances",obj_eath); // верхнаяя точка

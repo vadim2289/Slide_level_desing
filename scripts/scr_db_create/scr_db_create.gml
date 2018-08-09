@@ -59,7 +59,7 @@ if(sector_==1){
 
 var i=0;
 var j=9;
-for(i=0;i<99;i++){
+for(i=0;i<200;i++){
 	if(global.DB[# i,0]==0){
 		global.DB[# i,0]=sector_
 		global.DB[# i,1]=number_start
