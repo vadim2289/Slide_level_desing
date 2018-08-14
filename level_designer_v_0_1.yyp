@@ -751,6 +751,14 @@
             }
         },
         {
+            "Key": "79916dd9-4fc0-493d-afc4-6ce7fd21fd88",
+            "Value": {
+                "id": "61e92b9d-5199-4093-a997-d14373996914",
+                "resourcePath": "datafiles_yy\\levelDB.txt.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "7a121485-f4e2-42ee-b63e-7f6c67780b27",
             "Value": {
                 "id": "95f63d4f-0e0d-46a4-85e3-65160bbbaddc",
@@ -1212,14 +1220,6 @@
                 "id": "a9396a7d-2928-478a-aaf6-a14a4781d1ff",
                 "resourcePath": "sprites\\spr_circle_R\\spr_circle_R.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "df41d7c4-4489-425b-bff0-9f603b2c16fa",
-            "Value": {
-                "id": "51a724b4-d8d9-45af-be8d-35a03fe7876a",
-                "resourcePath": "datafiles_yy\\levelDB.txt.yy",
-                "resourceType": "GMIncludedFile"
             }
         },
         {
